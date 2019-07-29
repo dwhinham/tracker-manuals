@@ -1,0 +1,942 @@
+       -------------------------
+
+       (C)1998 Abyss! Productions
+     This program is Public Domain
+
+           Written by & Help:
+         Martin "Dexter" Wodok
+                 Layout:
+         Manfred "Pink" Linzner
+
+ USE CURSOR LEFT/RIGHT TO SELECT TOPIC,
+ AND UP/DOWN TO READ ABOUT THAT TOPIC.
+ PRESS ESC OR HELP TO EXIT HELPSCREEN.
+
+<-- GENERAL      DOWN     MAINSCREEN -->
+ Thanks must go to the following for
+ contributing with suggestions and
+ bug-reports/tunes/code: K-P Koljonen,
+ Tommy, Florian Vorberger, Twice/Lego,
+ Evert-Jan Slypen, Ramosa, Ben Preece,
+ Kaare Johansen (Thanx for writing AHX-
+ Ripper!), Frostycat, freQvibez/Offence
+ Oxide&Stargazer/Sonik, Geir Tjelta
+ ¡Tony Stuvo Aky! / Odrusba+Llfb
+ Rawstyle/Lego and many more.
+ Helloes go to: Twice/Lego, Gryzor
+ Offa/TBL, Equalizer/TBL, Geggin/Censor
+ Design, Peter Kunath, Ixxy/TRSI
+ Abyss/Future Crew, Magic Toon and all
+ the guys i haven't written back :-)
+<-- GENERAL     UP/DOWN   MAINSCREEN -->
+ Hi there music lovers!
+
+ We finally made it; AHX Version 2.xx
+ has come to stay! At last we can be
+ proud of saying that it is the best!
+
+ There has been a lot of changes this
+ time, especially to finally include
+ filtering, preferences and volume-
+ meters in AHX. And it works! (as far as
+ we know, at least). 
+ Don't hesitate to contact us if you
+ can't get it working or there's some-
+ thing you can't figure out.
+
+<-- GENERAL     UP/DOWN   MAINSCREEN -->
+ Some technical info:
+
+   Sourcecode: 326k / 14500 lines
+ Main Program: 186k (unpacked)
+     GFX data: 60k (unpacked)
+     Worktime: 9958654985476 hours
+     ASM time: about 27 minutes
+
+ 'I hate this!'
+ --------------
+ Dexter had quite a job this time, and
+ since we don't have more AHX coders,
+ and he's extraordinarely lazy, it
+ was hell on earth. He coded the filters
+ about 12-13 times and much time was
+<-- GENERAL    UP/DOWN    MAINSCREEN -->
+ lost on thinking about why it doesn't
+ work but afterwards, it all ended well.
+
+ You're looking at the result now. :-)
+ What do you think?!
+ 
+ AHX finally deserves to be
+ called 'the best sid tracker around',
+ which many of you have been calling
+ it in your psychotic letters to us... 
+ 
+ One thing that surprised us though, 
+ was the fact that all of you said
+ it was "great", "superb" and so on.
+
+<-- GENERAL     UP/DOWN   MAINSCREEN -->
+ Very few (Noone!) complained or came
+ up with new, original ideas and/or
+ useful features! Most of the things
+ in AHX2.0 are self-invented, but thanks
+ must go to the Hamre brothers who wrote
+ the original pt-docs and of course to
+ MAHONEY&KAKTUS. Thanks guys, you really
+ are a great bunch of people!
+
+ C64 lives - SID rulez
+        PC is dead - Soundblaster sucks
+
+ All AHX composers: Please send all
+ your tunes to me (Dexter and/or Pink)
+
+<-- GENERAL     UP/DOWN   MAINSCREEN -->
+
+ Something you'd like in the next
+ version of Protracker? Have you found
+ any bugs? Or do you just want to play
+ tic-tac-toe by mail?
+
+          Anyway, write to:
+
+          Martin Wodok (Dexter)
+          Rattenberger Str. 28
+          81373 Muenchen
+          Germany
+
+        (No games, please!)
+
+<-- GENERAL     UP/DOWN   MAINSCREEN -->
+
+ Planned release date for AHX v3:
+
+ Haven't got the foggiest idea...
+
+
+          For musics, write to:
+
+          Manfred Linzner (Pink)
+          Rupert-Mayer-Str. 6
+          81379 Muenchen
+          Germany
+
+        (No handle on envelope, please!)
+
+<-- GENERAL       UP      MAINSCREEN -->
+               MAINSCREEN
+               ----------
+ ## PLAY ##
+ Will play the song from the current
+ position in the song. The pointer
+ won't turn yellow, but you'll hear
+ and see when AHX is playing :-)
+ Holding down the right button while
+ pressing play will play from the
+ current patternposition.
+
+ ## STOP ##
+ Will stop playing of songs and pos-
+ itions, recording, and will turn edit
+ mode off.
+<-- AHX          DOWN     PLIST CMDS -->
+
+ ## POS ##
+ The current position being displayed/
+ played.
+
+ ## LEN ##
+ The length of the song in positions.
+
+ ## RES ##
+ The position where AHX restarts the
+ song at.
+
+ ## TRL ##
+ The length of the tracks in steps.
+
+<-- AHX         UP/DOWN   PLIST CMDS -->
+
+ ## SS ##
+ Number of subsongs (exluding the
+ mainsong!).
+
+ ## SSN ##
+ Number of subsong to edit/play.
+
+ ## SSP ##
+ Position of subsong nr. SSN.
+
+ refer to topic Subsongs for more
+ detailed information on subsongs!
+
+
+<-- AHX         UP/DOWN   PLIST CMDS -->
+
+ The small gadgets labeled marked with
+
+ ## speaker symbols ##
+ represent the audiochannels of your
+ amiga. When lit, that channel is on.
+ When not lit, the channel is muted
+ and and the notes in that track will
+ not be played.
+
+*You can also use ctrl-a to toggle an
+*audiochannel, and ctrl-q to unmute all
+*channels. Ctrl+shift-a will solo the
+*current channel.
+
+<-- AHX         UP/DOWN   PLIST CMDS -->
+
+ Instruments
+ -----------
+
+ Clicking on the instrument up/down
+ gadgets will flicker through the
+ instruments. You can use up to 63,
+ or hex $3F instruments in a song.
+
+ Holding down the right button when
+ pressing the Pos, Len, Ins and Res
+ gadgets will speed them up a bit.
+
+
+
+<-- AHX         UP/DOWN   PLIST CMDS -->
+             EFFECT COMMANDS
+             ---------------
+
+ Effect commands on AHX should mostly
+ be compatible with all other trackers. 
+
+ 0 - None/JumpPos Hi   8 - Ext. Timing
+ 1 - Portamento Up     9 - Overr. Square
+ 2 - Portamento Down   A - VolumeSlide
+ 3 - TonePortamento    B - PositionJump
+ 4 - Set/Overr. Filter C - Set Volume
+ 5 - ToneP + VolSlide  D - PatternBreak
+ 6 - * NOT USED *      E - Misc. Cmds
+ 7 - * NOT USED *      F - Set Speed
+
+<-- PLIST CMDS   DOWN       KEYBOARD -->
+ Cmd 0. Set Pos-Jump Hi [HiPos:$0-$9]
+ ------------------------------------
+ Usage: $0 + positionjump hi
+
+ Jumping to e.g. position 123 (decimal)
+ must be done using Cmd. $0 + $01 and
+ Cmd. $B + $23. Value will be reset to
+ $00 after jumping (using $B) to the
+ desired position.
+
+ Example: ---00002  0 is the command,
+                 2 is positionjump hi
+
+
+
+<-- PLIST CMDS  UP/DOWN     KEYBOARD -->
+ Cmd 1. Portamento up [Speed:$00-$FF]
+ ------------------------------------
+ Usage: $1 + portamento speed
+
+ Portamento up will simply slide the
+ sample pitch up. You can NOT slide
+ higher than B-5! (Period 113)
+ Example: C-300103  1 is the command,
+            3 is the portamentospeed.
+ NOTE: The portamento will be called as
+ many times as the speed of the song.
+ This means that you'll sometimes have 
+ trouble sliding accuratly. If you
+ change the speed without changing the
+ sliderates, it will sound bad...
+<-- PLIST CMDS  UP/DOWN     KEYBOARD -->
+ Cmd 2. Portamento down [Speed:$00-FF]
+ -------------------------------------
+ Usage: $2 + portamento speed
+
+ Just like command 1, except that this
+ one slides the pitch down instead.
+ (Adds to the period).
+
+ You can NOT slide lower than C-1!
+ (Period 856)
+
+ Example: C-300203  2 is the command,
+            3 is the portamentospeed.
+
+
+<-- PLIST CMDS  UP/DOWN     KEYBOARD -->
+ Cmd 3. Tone-portamento [Speed:$00-$FF]
+ -------------------------------------- 
+ Usage: Dest-note + $3 + slidespeed
+ WON'T WORK IF THE TRACK IS TRANSPOSED!!
+
+ This command will automatically slide
+ from the old note to the new.
+ You don't have to worry about which
+ direction to slide, you need only set
+ the slide speed. To keep on sliding,
+ just select the command $3 + 00.
+ Example: A-200000  First play a note.
+          C-300305  C-3 is the note to
+               slide to, 3 the command,
+               and 5 the speed.
+<-- PLIST CMDS  UP/DOWN     KEYBOARD -->
+ Cmd 4. Set/O. Filter [$01-$3F,$41-$7F]
+ --------------------------------------
+ Usage: $4 + filter / filter+$40
+
+ Example: C-300405  4 is the command,
+ 5 is filter $05 (when Cmd 0 in pList),
+          C-300443  4 is the command,
+ 43 is filter $03 and set filter immed.
+
+ Values $01-$3F will override Cmd.$0 in
+ pList and set the filter when it's set
+ through Cmd.$0 in the pList.
+ Add $40 to the filter you want to set
+ to set the filter immediately.
+
+<-- PLIST CMDS  UP/DOWN     KEYBOARD -->
+ Cmd 5. ToneP + Volsl [Spd:$0-$F/$0-$F]
+ --------------------------------------
+ Usage: $5 + upspeed + downspeed
+
+ This command will continue the current
+ toneportamento and slide the volume
+ at the same time. Stolen from NT2.0.
+
+ Example: C-300503  3 is the speed to
+                turn the volume down.
+
+          C-300540  4 is the speed to
+                         slide it up.
+
+
+<-- PLIST CMDS  UP/DOWN     KEYBOARD -->
+ Cmd 8. External Timing [User:$01-$FF]
+ -------------------------------------
+ Usage: $8 + externaltimingdata
+
+ This command will set the External
+ Timing byte in replayer's public-mem
+ section. Refer to replayer's documen-
+ tation for further information/usage.
+
+ Example: ---00827  27 is the value set
+                   for external timing.
+
+
+
+
+<-- PLIST CMDS  UP/DOWN     KEYBOARD -->
+ Cmd 9. Set SquareRelation [SR:$01-$3F]
+ --------------------------------------
+ Usage: $9 + square-relation
+
+ This command will set the square-
+ relation (set in pList using Cmd.$3xx)
+ immediately and will disable the first
+ $3xx Cmd. (if appearing in the pList).
+ Example: C-300920 20 is the square-
+                            relation
+          ---00918 18 is the square-
+                            relation
+          ---00910 10 is the square-
+                            relation
+
+<-- PLIST CMDS  UP/DOWN     KEYBOARD -->
+ Cmd A. Volumeslide [Speed:$0-$F/$0-$F]
+ --------------------------------------
+ Usage: $A + upspeed + downspeed
+
+ Example: C-300A05  5 is the speed to
+                turn the volume down.
+
+          C-300A40  4 is the speed to
+                         slide it up.
+
+ NOTE: The slide will be called as
+ many times as the speed of the song.
+ The slower the song, the more the
+ volume will be changed on each note.
+
+<-- PLIST CMDS  UP/DOWN     KEYBOARD -->
+ Cmd B. Position-jump [Pos:$00-$99]
+ ----------------------------------
+ Usage: $B + position to continue at
+
+ Example: C-300B00  B is the command,
+                 0 is the position to
+                 restart the song at.
+
+ This command will also perform a
+ pattern-break (see 2 pages below).
+
+ You have to enter the position in
+ decimal (NOT in hex as in PT). Use
+ Cmd. $0 to jump to positions >100.
+
+<-- PLIST CMDS  UP/DOWN     KEYBOARD -->
+ Cmd C. Set volume [Volume:see below]
+ ------------------------------------
+ Usage: $C+$00-$40: Instrument volume
+        $C+$50-$90: VMvol. 4 all voices
+        $C+$A0-$E0: Voice Master vol.
+
+ Well, this old familiar command will
+ set the current volume to your own
+ selected. The highest volume is $40.
+ All volumes are represented in hex.
+ (Programmers do it in hex, you know!)
+
+ Example: C-300C10  C is the command,
+       10 is the volume (16 decimal).
+
+<-- PLIST CMDS  UP/DOWN     KEYBOARD -->
+ Cmd D. Pattern-break
+           [Pattern-pos:00-63, decimal]
+ -------------------------------------- 
+ Usage: $D + pattern-position
+
+ This command just jumps to the next
+ song-position, and continues play
+ from the patternposition you specify.
+ Example: C-300D00  Jump to the next
+     song-position and continue play
+            from patternposition 00.
+      Or: C-300D32  Jump to the next
+     song-position and continue play
+    from patternposition 32 instead.
+
+<-- PLIST CMDS  UP/DOWN     KEYBOARD -->
+              E - COMMANDS
+              ------------
+
+ The E command has been altered to
+ contain more commands than one.
+
+ E0- * NOT USED *      E8- * NOT USED *
+ E1- Fineslide Up      E9- * NOT USED *
+ E2- Fineslide Down    EA- FineVol Up
+ E3- * NOT USED *      EB- FineVol Down
+ E4- Vibrato Control   EC- NoteCut
+ E5- * NOT USED *      ED- NoteDelay
+ E6- * NOT USED *      EE- * NOT USED *
+ E7- * NOT USED *      EF- * NOT USED *
+
+<-- PLIST CMDS  UP/DOWN     KEYBOARD -->
+ Cmd E1. Fineslide up [Range:$0-$F]
+ ----------------------------------
+ Usage: $E1 + value
+
+ This command works just like the
+ normal portamento up, except that
+ it only slides up once. It does not
+ continue sliding during the length of
+ the note.
+
+ Example: C-300E11  Slide up 1 at the
+                    beginning of the
+                    note.
+
+ (Great for creating chorus effects)
+<-- PLIST CMDS  UP/DOWN     KEYBOARD -->
+ Cmd E2. Fineslide down [Range:$0-$F]
+ ------------------------------------
+ Usage: $E2 + value
+
+ This command works just like the
+ normal portamento down, except that
+ it only slides down once. It does not
+ continue sliding during the length of
+ the note.
+
+ Example: C-300E26  Slide down 6 at the
+                    beginning of the
+                    note.
+
+
+<-- PLIST CMDS  UP/DOWN     KEYBOARD -->
+ Cmd E4. VibratoDepth [Value:$0-$F]
+ ----------------------------------
+ Usage: $E4 + VibratoDepth.
+
+ This command will set/override the
+ VibratoDepth value set in the
+ current instrument's Performance-
+ List!
+
+ Example: C-301000  Hit Insturment 1
+          ---00E40  Stop Vibrato
+          ---00E48  Medium Vibrato
+
+
+
+<-- PLIST CMDS  UP/DOWN     KEYBOARD -->
+ Cmd EA. FineVolsl up [Range:$0-$F]
+ ----------------------------------
+ Usage: $EA + value
+
+ This command works just like the
+ normal volumeslide up, except that
+ it only slides up once. It does not
+ continue sliding during the length o
+ the note.
+
+ Example: C-300EA3  Slide volume up 1
+                    at the beginning
+                    of the note.
+
+
+<-- PLIST CMDS  UP/DOWN     KEYBOARD -->
+ Cmd EB. FineVolsl down [Range:$0-$F]
+ ------------------------------------
+ Usage: $EB + value
+
+ This command works just like the
+ normal volumeslide down, except that
+ it only slides down once. It does not
+ continue sliding during the length of
+ the note.
+
+ Example: C-300EB6  Slide volume down
+                    6 at the beginning
+                    of the note.
+
+
+<-- PLIST CMDS  UP/DOWN     KEYBOARD -->
+ Cmd EC. Cut note [Value:$0-$F]
+ ------------------------------
+ Usage: $EC + Tick to Cut note at.
+
+ This command will cut the note
+ at the selected tick, creating
+ extremely short notes.
+
+ Example: C-300F06  Set speed to 6.
+          C-300EC3  Cut at tick 3 out
+                    of 6.
+
+ Note that the note is not really cut,
+ the volume is just turned down.
+
+<-- PLIST CMDS  UP/DOWN     KEYBOARD -->
+ Cmd ED. NoteDelay [Value:$1-$F]
+ -------------------------------
+ Usage: $ED + ticks to delay note.
+
+ This command will delay the note
+ to the selected tick.
+
+ Example: C-300F06  Set speed to 6.
+          C-300ED3  Play note at tick
+                    3 out of 6.
+
+
+
+
+
+<-- PLIST CMDS  UP/DOWN     KEYBOARD -->
+ Cmd F. Set speed [Speed:$00-$FF]
+ --------------------------------
+ Usage: $F + speed
+
+ This command will set the speed of the
+ song.
+
+ Vblank: Range 01-FF - Normal timing
+
+    CIA: Range 01-FF - Normal timing
+
+   Both: Range 00    - STOP song.
+
+
+
+<-- PLIST CMDS    UP        KEYBOARD -->
+         EFFECT COMMANDS (pList)
+         -----------------------
+
+  Effect commands on AHX v2.3d should
+ be compatible with older AHX-Versions.
+
+ 0 - Init Filter
+ 1 - Portamento Up
+ 2 - Portamento Down
+ 3 - Init Square
+ 4 - Toggle Mod. (S+F)
+ 5 - Jump to Step
+ 6 - Volume (C)
+ 7 - Speed (F)
+
+<-- MAIN SCREEN  DOWN    EFFECT CMDS -->
+   Cmd 0. Init Filter [Filter:$01-$3F]
+   -----------------------------------
+ Usage: $0 + filter
+
+ Sets the filter.
+
+ Value $01-$1F: Low-Pass Filter
+                $01: heavy filtered
+                $1F: slightly filtered
+       $20:     No filter (std. value)
+       $31-$3F: High-Pass Filter
+                $21: slightly filtered
+                $3F: heavy filtered
+
+
+<-- MAIN SCREEN UP/DOWN  EFFECT CMDS -->
+ Cmd 1. Portamento up [Speed:$00-$FF]
+ ------------------------------------
+ Usage: $1 + portamento speed
+ Portamento up will simply slide the
+ sample pitch up. You can NOT slide
+ higher than B-5! (Period 113)
+
+ Example: C-3x103000  1 is the command,
+              3 is the portamentospeed.
+ NOTE: The portamento will be called as
+ many times as the speed of the pList.
+ This means that you'll sometimes have
+ trouble sliding accuratly. If you
+ change the speed without changing the
+ sliderates, it will sound bad...
+<-- MAIN SCREEN UP/DOWN  EFFECT CMDS -->
+ Cmd 2. Portamento down [Speed:$00-FF]
+ -------------------------------------
+ Usage: $2 + portamento speed
+
+ Just like command 1, except that this
+ one slides the pitch down instead.
+ (Adds to the period).
+
+ You can NOT slide lower than C-1!
+ (Period 856)
+
+ Example: C-3x203000  2 is the command,
+              3 is the portamentospeed.
+
+
+<-- MAIN SCREEN UP/DOWN  EFFECT CMDS -->
+ Cmd 3. Init Square [Sq.-Rel:$01-$3F]
+ ------------------------------------
+ Usage: $3 + square-relation
+
+ Sets the square-relation.
+ Values depend on the wavelength of the
+ instr. !! Don't use lower values than:
+ Wavelength $80: Range $01-$3F
+            $40: Range $02-$3F
+            $20: Range $04-$3F
+            $10: Range $08-$3F
+            $08: Range $10-$3F
+            $04: Range $20-$3F
+ Only for SquareLowerLimit these Values
+ will be corrected if a new WLen is set!
+<-- MAIN SCREEN UP/DOWN  EFFECT CMDS -->
+ Cmd 4. Toggle Mod. [$00,$1/$f,$1/$f]
+ ------------------------------------
+ Usage: $4+toggle filter/toggle square
+
+ The upper nibble will toggle filter-
+ modulation, the lower nibble will
+ toggle square-modulation:
+ Values $1 for pos. start-signum/off
+        $f for neg. start-signum/off
+ Cmd. $4 + $00 is kept compatible with
+ older AHX-Versions and is the same as
+ Cmd. $4 + $01 (toggle squaremod. with
+ positive signum! NOW YOU CAN ALSO SET
+ THE START VALUE >OUT OF< THE RANGE!
+ THEN THE SIGNUM WILL BE IGNORED!
+<-- MAIN SCREEN UP/DOWN  EFFECT CMDS -->
+ Cmd 5. Position-jump [Pos:$00-$ff]
+ ----------------------------------
+ Usage: $5 + position to loop to
+
+ You have to enter the position in
+ HEX-Values !!
+
+
+
+
+
+
+
+
+
+<-- MAIN SCREEN UP/DOWN  EFFECT CMDS -->
+ Cmd C. Set volume [Volume:see below]
+ ------------------------------------
+ Usage: $C+$00-$40: Instrument volume
+        $C+$50-$90: perfSub volume
+        $C+$A0-$E0: Voice Master vol.
+
+ Well, this old familiar command will
+ set the current volume to your own
+ selected. The highest volume is $40.
+ All volumes are represented in hex.
+ (Programmers do it in hex, you know!)
+ The perfSub volume is for relative
+ volume in the instr. while you're
+ playing the same instrument in the
+ tracks only with other Instr. volume
+<-- MAIN SCREEN UP/DOWN  EFFECT CMDS -->
+ Cmd F. Set pList-speed [Speed:$00-$FF]
+ --------------------------------------
+ Usage: $F + pList-speed
+
+ This command will set the speed of the
+ Performance List.
+
+ Vblank: Range 01-FF - Normal timing
+
+    CIA: Range 01-FF - Normal timing
+
+   Both:       00    - STOP pList
+        (don't use!-senseless! just set
+         the pList-Length!)
+
+<-- MAIN SCREEN   UP     EFFECT CMDS -->
+                KEYBOARD
+                --------
+ The keymap on protracker is a standard
+ us keymap. Remember to always use the
+ left shift and alt, as the right ones
+ are used for other things.
+
+ Keys marked with a star (*) are not
+ (yet) built in !!!
+
+ High notekeys:  2 3   5 6 7   9 0   =
+                Q W E R T Y U I O P [ ]
+                   
+ Low notekeys:    S D   G H J   L ;
+                 Z X C V B N M , . /
+<-- EFFECT CMDS  DOWN        GENERAL -->
+
+ F1 - Choose lowest octave  (C-1 to G-3)
+ F2 - Choose second octave  (C-2 to G-4)
+ F3 - Choose third octave   (C-3 to G-5)
+ F4 - Choose fourth octave  (C-4 to B-5)
+ F5 - Choose highest octave (C-5 to B-5)
+
+ shft+F3 - Cut track to buffer
+ shft+F4 - Copy track to buffer
+ shft+F5 - Paste track-buffer to track
+
+ ctrl+F3 - Cut commands to buffer
+ ctrl+F4 - Copy commands to buffer
+ ctrl+F5 - Paste cmd-buffer to track
+
+<-- EFFECT CMDS UP/DOWN      GENERAL -->
+
+ F6 - Go to patternposition 0
+ F7 - Go to patternposition 16
+ F8 - Go to patternposition 32
+ F9 - Go to patternposition 48
+ F10- Go to patternposition 63
+
+L-Amiga+Return - Update Track/Voice
+                 Display according to
+                 the given Tracks given
+                 in the PosEd's current
+                 Position.
+
+Esc - Exit Help
+      Toggle Main/Instrument Editor
+<-- EFFECT CMDS UP/DOWN      GENERAL -->
+ shft+Return  - Insert blank note at
+                cursorposition and move
+                the others down. Notes
+                beyond patternposition
+                63 will be lost!
+ shft+Bckspce - Delete note above
+                cursorposition and move
+                the others up. You can
+                NOT do this if you're
+                at patternposition 0!
+
+*alt+Return    - As above, but with
+                 all 4 tracks
+*alt+Backspace - As above, but with
+                 all 4 tracks
+<-- EFFECT CMDS UP/DOWN      GENERAL -->
+ ctrl+Return    - Push cmds one down
+ ctrl+Backspace - Drag cmds one up
+
+ ctrl+0-9 - Select how many slots PT
+            will jump down each time
+            you insert a note (this is
+            only in Edit-mode) EDITSKIP
+
+  alt+cursor right - tracknumber up
+  alt+cursor left  - tracknumber down
+ ctrl+cursor up    - vice-versa up (try)
+ ctrl+cursor down  - vice-versa down
+
+ BackwardsSingleQuote (The key over
+ TAB, you know?) - Go to Workbench
+<-- EFFECT CMDS UP/DOWN      GENERAL -->
+      Help - Go to help screen
+ shft+Help - Open AmigaGuide help
+             on Workbench
+
+ Space - Toggle between Stop/Edit-mode
+
+ < (beside Z) - Kill DMA & Volumes to 0
+  right Amiga - Play Pattern
+    right Alt - Play Song
+  right Shift - Record
+    Caps Lock - Toggle TestMode in InsEd
+
+      Del - Delete note under cursor
+  alt+Del - Delete command only 
+ shft+Del - Delete note and command
+<-- EFFECT CMDS UP/DOWN      GENERAL -->
+ On Numeric pad:
+
+          1 - Select Instrument 01
+          9 - Select Instrument 09
+  Enter + 3 - Select Instrument 39
+          4 - Select Instrument 34
+  Enter + 0 - Select Instrument 04
+          1 - Select Instrument 01
+
+ Holding Enter + the other keys select
+                 the upper digit
+
+ Period (.) - Kill current sample
+
+
+<-- EFFECT CMDS UP/DOWN      GENERAL -->
+      Tab - Move cursor to next track
+ Shft+Tab - Move cursor to prev track
+ Ctrl+Tab - Move cursor to note-column
+  Alt+Tab - Combines Tab and Ctrl-Tab
+
+*Ctrl+A - Toggle channel on/off
+ Ctrl+B - Mark block
+ Ctrl+C - Copy block to buffer
+*Ctrl+D - Delete block, drag notes up
+*Ctrl+e - expand track
+*Ctrl+g - Boost all samples
+*Ctrl+h - Transpose block up
+ Ctrl+i - Insert block, push notes down
+*Ctrl+j - Join-paste block
+ Ctrl+k - Kill to end of track
+<-- EFFECT CMDS UP/DOWN      GENERAL -->
+*Ctrl+l - Transpose block down
+ Ctrl+m - Toggle multikeyboard on/off
+*Ctrl+n - Re-mark last block
+*Ctrl+o - Contract track
+ Ctrl+p - Paste block
+*Ctrl+q - Unmute all channels
+*Ctrl+r - Restore F6-F10 positions
+*Ctrl+s - Toggle split keyboard on/off
+ Ctrl+t - swap tracks
+*Ctrl+v - Filter all samples
+*Ctrl+w - Polyphonize block
+*Ctrl+x - Cut block to buffer
+*Ctrl+y - Backwards block
+*Ctrl+z - Restore Effects
+
+<-- EFFECT CMDS UP/DOWN      GENERAL -->
+*shft+0-9 - Store current command on
+            selected key
+* alt+0-9 - Insert command in current
+            track
+
+  alt+"\" - Copy command above cursor
+            to current patternposition.
+  alt+"=" - Copy command above cursor
+            to current patternposition
+            and add one to the value.
+  alt+"-" - Copy command above cursor
+            to current patternposition
+            and subract one from the
+            value.
+
+<-- EFFECT CMDS UP/DOWN      GENERAL -->
+
+ *alt+A - Monitor/Start sampling
+ *alt+B - Boost sample
+  alt+C - Toggle channel 3
+ *alt+D - Go to Disk Op.
+ *alt+E - Go to Edit Op.
+ *alt+F - Filter sample
+ *alt+I - Autoinsert volume
+ *alt+K - Delete current sample/track
+  alt+Q - Quit AHX
+ *alt+R - Resample
+ *alt+S - Go to Sampler screen
+ *alt+T - Tuning Tone
+  alt+V - Toggle channel 4
+
+<-- EFFECT CMDS UP/DOWN      GENERAL -->
+
+  alt+X - Toggle channel 2
+  alt+Y -
+  alt+Z - Toggle channel 1
+
+ alt+F3 - Cut   (instrument)
+ alt+F4 - Copy  (instrument)
+ alt+F5 - Paste (instrument)
+
+    * \ - Toggle keypad mode (dots!)
+*Return - Step one note forward
+*Backspc- Step one note backward
+* Alt+any key on keypad - tune drumpad
+ctrl+arrows left/rite - Instr up/down
+<-- EFFECT CMDS   UP         GENERAL -->
+             GENERAL INFO.
+             -------------
+ Making Music
+ ------------
+ Any piece of music written with AHX
+ is built up from positions.
+ Each position is built up from four
+ tracks, one for each of the amiga's
+ audiochannels.
+
+ A pattern is 64 lines long. The magni-
+ fied line is always the one you edit.
+ If you need shorter patterns, just set
+ the TrackLength (TRL) field or use the
+ patternbreak effect command.
+<-- KEYBOARD     DOWN            AHX -->
+
+ A track is built up like this:
+
+     32  C-3 01 C20
+     /   \_/ I/ \_/
+    /    /   I    \
+ Step Note Instr. Effect cmd.
+
+ The C-3 is the note being played at
+ trackposition 32. 01 is the instrument
+ number, and the three last digits are
+ the effect command, in this case, set
+ volume to $20 (C-Command, 20-Value).
+
+
+<-- KEYBOARD    UP/DOWN          AHX -->
+
+ Protracker holds a table with info 
+ about the sequence in which the tracks
+ will be played. With the "Pos" gadget
+ you determine your position in the
+ table. Enter the 4 "Tracks" and the
+ "Transposing" that define what track
+ to play transposed or not at that
+ position. "Length" defines the total
+ size of the table. The full sequence
+ of tracks is the Song. A song is built
+ up from up to 256 different tracks,
+ 4 of them being played at up to 999
+ different positions.
+
+<-- KEYBOARD    UP/DOWN          AHX -->
